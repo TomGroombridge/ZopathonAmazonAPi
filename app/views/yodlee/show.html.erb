@@ -1,3 +1,7 @@
+
+<section class="section contact" id="contact">
+  <div class="contact__header">
+
 <h2>User Details</h2>
 <%= @user.name %>
 <%= @user.email %>
@@ -19,5 +23,9 @@
 <%= @user.addresses.last.post_code %>
 
 <br>
-<%= link_to 'Go to a quote page', quote_index_path %>
-<a href"#" class="button">Connect to my bank</a>
+<br>
+<br>
+<%= link_to 'Connect to my bank', quote_index_path, :class => 'button' %>
+</div>
+
+<div class="loader"></div>

@@ -1,8 +1,16 @@
 <% if user_signed_in? %>
-  <li><%= link_to 'Sign out', signout_path %></li>
+  <%= link_to 'Sign out', signout_path %>
 <% else %>
-  <li><%= link_to 'Sign in with Amazon', signin_path %></li>
+<section class="section contact" id="contact">
+  <div class="contact__header">
+  <p>
+    Please login with your Amazon account.
+  </p>
+  <br>
+  <%= link_to(image_tag("amazon-32.png"),  signin_path, :class => "amazon_button") %>
+  </div>
+</section>
 <% end %>
 <% if user_signed_in? %>
-  <li><%= link_to 'Users', users_path %></li>
+  <%= link_to 'Users', users_path %>
 <% end %>
