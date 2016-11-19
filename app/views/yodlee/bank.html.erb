@@ -1,35 +1,5 @@
 
-<section class="section contact" id="contact">
-  <div class="contact__header" style="display:inline">
-
-<h2>User Details</h2>
-<%= @user.name %>
-<%= @user.email %>
-
-
-<h2>Address History</h2>
-<%= @user.addresses.last.house_number %>
-<br>
-<%= @user.addresses.last.house_name %>
-<br>
-<%= @user.addresses.last.street_1 %>
-<br>
-<%= @user.addresses.last.street_2 %>
-<br>
-<%= @user.addresses.last.county %>
-<br>
-<%= @user.addresses.last.district %>
-<br>
-<%= @user.addresses.last.post_code %>
-
-<br>
-<br>
-<br>
-<%= link_to 'Connect to my bank', "javascript:submitYodlee()", :class => 'button' %>
-</div>
-
-
-<div class="center processText"></div>
+<div class="center processText">Processing...</div>
                 <div style="visibility:hidden">
                                 <form action="https://node.developer.yodlee.com/authenticate/restserver/" method="post" id="rsessionPost">
                                                 <input type="text" name="rsession" placeholder="rsession" value="08062013_0:d0194c3a71798ebb3f66648bc660acc729244047d5f4b68306b9e6e3a8c4e3e9b5b4b9a71a0c9bfa86613fe8be8fd7844a34a748580e58f17aedc9d16653b7b9"/>
@@ -40,11 +10,6 @@
                                 </form>
                 </div>
                 <script>
-                var submitYodlee = function() {
-                    document.getElementById('rsessionPost').submit();
-                  };
+                                document.getElementById('rsessionPost').submit();
                 </script>
 </div>
-
-
-<div class="loader" style="display:none"></div>
