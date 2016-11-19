@@ -21,6 +21,7 @@ class LoanApplicationsController < ApplicationController
 	def save_into_session loan_amount, loan_term
     session[:loan_amount] = loan_amount
     session[:loan_term] = loan_term
+		session[:loan_purpose] = loan_purpose
   end
 
   def loan_amount
@@ -29,5 +30,9 @@ class LoanApplicationsController < ApplicationController
 
   def loan_term
     loan_application_params[:loan_term].to_f
+  end
+
+	def loan_purpose
+    loan_application_params[:loan_purpose].to_s
   end
 end
