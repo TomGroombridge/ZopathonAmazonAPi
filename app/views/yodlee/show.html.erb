@@ -2,30 +2,28 @@
 <section class="section contact" id="contact">
   <div class="contact__header" style="display:inline">
 
-<h2>User Details</h2>
-<%= @user.name %>
-<%= @user.email %>
+<h1>Thanks!</h1>
+<h2>Are these details correct?</h2>
+<br>
+
+<br>
 
 
-<h2>Address History</h2>
+Name : Erce Kalabalikoglu <br>
+Email : ercekalabalikoglu@gmail.com
+<br><br>
+Address:
 <%= @user.addresses.last.house_number %>
-<br>
-<%= @user.addresses.last.house_name %>
-<br>
-<%= @user.addresses.last.street_1 %>
-<br>
-<%= @user.addresses.last.street_2 %>
-<br>
+<%= @user.addresses.last.house_name %> <br>
+<%= @user.addresses.last.street_1 %>,
 <%= @user.addresses.last.county %>
 <br>
-<%= @user.addresses.last.district %>
-<br>
-<%= @user.addresses.last.post_code %>
-
+SE1 2QG
 <br>
 <br>
 <br>
-<%= link_to 'Connect to my bank', new_yodlee_path, :class => 'button' %>
+<%= link_to 'Edit', new_yodlee_path, :class => 'button' %>
+<%= link_to "Yes, that's me!", new_yodlee_path, :class => 'button' %>
 </div>
 
 

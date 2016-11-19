@@ -17,12 +17,13 @@
         <div class="calculator__top">
 
           <p class="calculator__amountHeader">
-            <span class="calculator__amountText">I want to get a loan for</span>
+            <span class="calculator__amountText">I'm looking for a loan of</span>
             <%= f.number_field :loan_amount %>
           </p>
 
+
           <p class="calculator__amountHeader">
-            <span class="calculator__amountText">over a period of</span>
+            <span class="calculator__amountText">Over </span>
 
               <span class="calculator__amountDropdown">
                 <%= f.number_field :loan_term %>
@@ -30,6 +31,11 @@
 
             <span class="calculator__amountText">months</span>
           </p>
+          <p class="calculator__amountHeader">
+            <span class="calculator__amountText">For</span>
+            <%= f.select :loan_term, ['Car', 'Home improvement', 'Debt consolidation', 'Credit cards', 'Boat', 'Business', 'Caravan', 'Christmas expense', 'Electronic goods', 'Holiday', 'Motorbike', 'Repairs', 'Wedding'] %>
+          </p>
+
 
         </div>
         <div class="calculator__content">

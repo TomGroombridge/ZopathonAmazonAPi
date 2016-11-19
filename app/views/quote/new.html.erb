@@ -1,0 +1,43 @@
+<section class="section twoBlock" id="who-is-zopa">
+<br><br><br>
+<div class="calculator calculator--simple">
+  <div class="calculator__innerContainer">
+    <%= form_for @loan, class: "calculator__form" do |f| %>
+      <fieldset class="calculator__fieldset">
+        <div class="calculator__top">
+
+          <p class="calculator__amountHeader">
+            <span class="calculator__amountText">My income is <b>£</b></span>
+            <%= f.number_field :loan_amount, :size => 30, :value => 2000 %> per month
+          </p>
+
+
+          <p class="calculator__amountHeader">
+            <span class="calculator__amountText">My mortgage/rent is <b>£</b></span>
+
+              <span class="calculator__amountDropdown">
+                <%= f.number_field :loan_term, :value => 500, :size => 30 %> per month
+              </span>
+
+          </p>
+          <p class="calculator__amountHeader">
+            <span class="calculator__amountText">My date of birth </span>
+
+              <span class="calculator__amountDropdown">
+                <%= f.date_select :loan_term %>
+              </span>
+
+          </p>
+        </div>
+        <div class="calculator__content">
+          <div class="calculator__quoteContainer">
+            <%= link_to "Yes, that's correct", quote_index_path, :class => "calculator__getQuote button" %>
+          </div>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+
+</div>
+
+</section>

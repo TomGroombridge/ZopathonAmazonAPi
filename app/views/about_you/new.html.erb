@@ -3,11 +3,14 @@
 <% else %>
 <section class="section contact" id="contact">
   <div class="contact__header">
-  <p>
-    Please login with your Amazon account.
-  </p>
+    <h2>Are you an Amazon customer?</h2>
+  <p>Save time by logging in with Amazon!</p>
   <br>
   <%= link_to(image_tag("amazon-32.png"),  signin_path, :class => "amazon_button") %>
+  <br>
+  <br><br>
+  <%= link_to 'Create a separate account', new_quote_path %>
+
   </div>
 </section>
 <% end %>
