@@ -1,0 +1,23 @@
+<h2>User Details</h2>
+<%= @user.name %>
+<%= @user.email %>
+
+
+<h2>Address History</h2>
+<%= @user.addresses.last.house_number %>
+<br>
+<%= @user.addresses.last.house_name %>
+<br>
+<%= @user.addresses.last.street_1 %>
+<br>
+<%= @user.addresses.last.street_2 %>
+<br>
+<%= @user.addresses.last.county %>
+<br>
+<%= @user.addresses.last.district %>
+<br>
+<%= @user.addresses.last.post_code %>
+
+<br>
+<%= link_to 'Go to a quote page', quote_index_path %>
+<a href"#" class="button">Connect to my bank</a>

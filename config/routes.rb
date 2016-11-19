@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :loan_applications
   resources :about_you
   resources :yodlee
+  resources :quote
 end
