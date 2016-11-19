@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
     build_address(@address_response)
 
-    redirect_to yodlee_path, :notice => 'Signed in!'
+    redirect_to yodlee_path(@user.id), :notice => 'Signed in!'
   end
 
   def destroy
